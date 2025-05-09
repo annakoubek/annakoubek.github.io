@@ -129,7 +129,11 @@ img {
     object-fit: cover;
     /* Resizes the image to cover the entire container */
 }
-
+.description iframe {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+  }
 .container {
     text-align: center;
     width: 100%;    
