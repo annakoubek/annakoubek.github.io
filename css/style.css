@@ -1,10 +1,12 @@
 :root {
-    --primaryText: #fff;
-    --secondaryText: #ff015e;
-    --primary: rgba(156, 39, 176, .60);
-    --secondary: rgba(255, 1, 94, .60); 
-    --buttonHover: rgba(156, 39, 176, .40);
-    --smallButtonHover: rgba(0, 0, 0, .25);
+    --primaryText: #542500;         
+    --secondaryText: #0d4702;      
+    --primary: rgba(255, 211, 182, 0.95);  
+    --secondary: rgba(173, 216, 230, 0.95); 
+    --buttonHover: rgba(255, 105, 180, .99); 
+    --smallButtonHover: rgb(145, 145, 255); 
+    
+
 }
 
 html {
@@ -22,11 +24,24 @@ html {
 }
 
 body {
+
+    #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+        z-index: -1;
+        object-fit: cover;
+        opacity: 0.9; 
+        pointer-events: none;
+      }
     margin: 0;
     min-height: 100%;
     /* The image used for the site background. Try changing skyscape.jpg to stars.jpg. Put a replacement photo in the images folder and, in line 21 below, replace skyscape.jpg with yourbackgroundfilename.jpg */
     /* The linear gradient darkens the image, like putting a sunglasses lens on top of it. If you want to darken the image even more, change 0.1 (both times) to 0.3 or higher */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/skyscape.jpg);
+    
+    /* Prevents the browser from repeating or "tiling" the background image */
     /* Prevents the browser from repeating or "tiling" the background image */
     background-repeat: no-repeat;
     background-position: center;
@@ -34,7 +49,18 @@ body {
     background-attachment: fixed;
     /* Resizes the background image to cover the entire container */
     background-size: cover;
-    font-family: Futura, Verdana, sans-serif;
+    font-family: 'Comic Neue', sans-serif;
+
+    body {
+        font-family: 'Comic Neue', sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      
     line-height: 1.5;
     font-size: 18px;
     display: flex;
@@ -51,7 +77,42 @@ h2 {
     font-size: 1em;
     margin-bottom: 0;
 }
-
+.name-title {
+    margin-top: -30px;
+    text-align: center;
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 2em;
+    margin-top: 20px;
+    color: var(--secondaryText);
+  
+    border: 2px var(--secondaryText);
+    border-radius: 40px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(169, 248, 255, 0.504);
+    backdrop-filter: blur(10px);
+  }
+  .soft-label {
+    background-color: rgb(255, 198, 228); /* Soft glow */
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 1.2em;
+    color: #5b4033; 
+    margin: 10px auto;
+    width: fit-content;
+    box-shadow: 0 4px 10px rgba(255, 192, 203, 0.3);
+  }
+  .description {
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
 img {
     margin: .5em 1em;
     /* border: 1px solid #ccc; */
